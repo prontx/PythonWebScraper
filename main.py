@@ -8,13 +8,20 @@ from bs4 import BeautifulSoup
 import jobfinder as jf
 import covid as c
 
+sessionCounter = 0
 def runnerFunction():
-    print('Hello! Please select script mode: ')
-    modeNumber = int(input())
-    if modeNumber == 1:
-        jf.jobFinder()
-    elif modeNumber == 2:
-        c.covidStats()
+    while 1:
+        global sessionCounter
+        if sessionCounter == 0:
+            print('Hello! Please select script mode: ')
+        else: 
+            print('Please select script mode or finish the app if you wish: ')
+        modeNumber = int(input())
+        if modeNumber == 1:
+            jf.jobFinder()
+        elif modeNumber == 2:
+            c.covidStats()
+        sessionCounter += 1
 
 if __name__ == "__main__":
     runnerFunction()
