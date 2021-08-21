@@ -21,6 +21,7 @@ def jobFinder():
     jobPositions = parsedPage.find_all("div", class_="base-card base-card--link base-search-card base-search-card--link job-search-card")
     # A counter to keep track of job number
     jobCounter = 0
+    print()
     for jobPosition in jobPositions:
         jobCounter += 1
         positionName = jobPosition.find("span", class_="screen-reader-text")
