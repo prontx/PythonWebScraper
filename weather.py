@@ -25,6 +25,28 @@ def weatherInCity():
     url = "https://api.openweathermap.org/data/2.5/onecall?lat=%s&lon=%s&appid=%s&units=metric" % (latitude, longitude, apiKey)
     response = requests.get(url)
     data = json.loads(response.text)
-    currentTemp = data["current"]["temp"]
-    print(f'\tCurrent temperature in {city} is: {currentTemp}°C')
+    data = data["current"]
+    print()
+
+    currentTemp = data["temp"]
+    print(f'\tCurrent temperature is: {currentTemp}°C')
+
+    feelsLike = data["feels_like"]
+    print(f'\tWeather feels like:     {feelsLike}°C')
+
+    pressure = data["pressure"]
+    print(f'\tThe pressure is:        {pressure}')
+
+    humidity = data["humidity"]
+    print(f'\tThe humidity is:        {humidity}')
+
+    clouds = data["clouds"]
+    print(f'\tClouds:                 {clouds}')
+
+    windSpeed = data["wind_speed"]
+    print(f'\tWind speed:             {windSpeed}')
+
+    currentWeather = data["weather"][0]["main"]
+    print(f'\tCurrent weather:        {currentWeather}')
+
     print()

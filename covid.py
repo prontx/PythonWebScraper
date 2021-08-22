@@ -19,27 +19,28 @@ def covidStats():
     counter = 0    
     for element in statistics:
         if counter == 1:
-            print('\t' + 'Country name: ' + element.text)
+            print('\t' + 'Country name:                       ' + element.text)
         elif counter == 2:
-            print('\t' + 'Total number of cases: ' + element.text)
+            print('\t' + 'Total number of cases:              ' + element.text)
         elif counter == 3:
-            print('\t' + 'Number of new cases: ' + element.text)
+            print('\t' + 'Number of new cases:                ' + element.text)
         elif counter == 4:
-            print('\t' + 'Total number of deaths: ' + element.text)
+            print('\t' + 'Total number of deaths:             ' + element.text)
         elif counter == 5:
-            print('\t' + 'New deaths: ' + element.text)
+            print('\t' + 'New deaths:                         ' + element.text)
         elif counter == 6:
-            print('\t' + 'Total recovered: ' + element.text)
+            print('\t' + 'Total recovered:                    ' + element.text)
         elif counter == 7:
-            print('\t' + 'New recovered: ' + element.text)
+            print('\t' + 'New recovered:                      ' + element.text)
         elif counter == 8:
-            print('\t' + 'Active cases: ' + element.text)
+            print('\t' + 'Active cases:                       ' + element.text)
         elif counter == 9:
-            print('\t' + 'Serious/critical: ' + element.text)
+            print('\t' + 'Serious/critical:                   ' + element.text)
         elif counter == 10:
             print('\t' + 'Total # of cases per 1M population: ' + element.text)
         elif counter == 11:
-            print('\t' + 'Total number of tests: ' + element.text)
+            print('\t' + 'Total number of tests:              ' + element.text)
         elif counter == 12:
-            print('\t' + 'Number of tests per 1M population: ' + element.text)
+            print('\t' + 'Number of tests per 1M population:  ' + element.text)
         counter += 1
+    print()
