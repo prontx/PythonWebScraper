@@ -7,6 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 import jobfinder as jf
 import covid as c
+import weather as w
 
 sessionCounter = 0
 def runnerFunction():
@@ -21,6 +22,8 @@ def runnerFunction():
             jf.jobFinder()
         elif modeNumber == 2:
             c.covidStats()
+        elif modeNumber == 3:
+            w.weatherInCity()
         sessionCounter += 1
 
 if __name__ == "__main__":
