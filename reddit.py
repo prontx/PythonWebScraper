@@ -34,5 +34,13 @@ def mostPopularPosts():
         print()
 
 
-def postInfo():
-    pass
+def postComments():
+    print()
+    print('Please enter the URL of the post you wish to scrape: ')
+    link = str(input())
+    submission = reddit.submission(url=link)
+    submission.comments.replace_more(limit=0)
+    print()
+    for top_level_comment in submission.comments():
+        print(top_level_comment.body)
+    print()    

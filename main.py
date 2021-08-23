@@ -31,7 +31,7 @@ def runnerFunction():
         elif modeNumber == 5:
             r.mostPopularPosts()
         elif modeNumber == 6:
-            r.postInfo()
+            r.postComments()
         sessionCounter += 1
 
 if __name__ == "__main__":
