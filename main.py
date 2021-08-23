@@ -5,9 +5,11 @@
 
 import requests
 from bs4 import BeautifulSoup
-import jobfinder as jf
-import covid as c
-import weather as w
+import jobfinder    as jf
+import covid        as c
+import weather      as w
+import translator   as t
+import reddit       as r
 
 sessionCounter = 0
 def runnerFunction():
@@ -24,6 +26,12 @@ def runnerFunction():
             c.covidStats()
         elif modeNumber == 3:
             w.weatherInCity()
+        elif modeNumber == 4:
+            t.translate()
+        elif modeNumber == 5:
+            r.mostPopularPosts()
+        elif modeNumber == 6:
+            r.postInfo()
         sessionCounter += 1
 
 if __name__ == "__main__":
