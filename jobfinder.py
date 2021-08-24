@@ -93,3 +93,6 @@ def jobFinder():
         jobDescription = jobPosition.find("p", class_="job-search-card__snippet")
         print('\t' + jobDescription.text.strip())
         print()
+
+if __name__ == "__main__":
+    jobFinder()
