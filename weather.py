@@ -95,3 +95,6 @@ def weatherInCity():
     print(f'\tCurrent weather:        {currentWeather}')
 
     print()
+
+if __name__ == "__main__":
+    weatherInCity()
